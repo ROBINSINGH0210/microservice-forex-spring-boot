@@ -23,6 +23,7 @@ public class ForexController {
 
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public ForexEntity retrieveExchangeValue(@PathVariable String from, @PathVariable String to) {
+		LOG.info("From : " + from + ", To:" + to);
 		ForexEntity forex = forexRepository.findByFromAndTo(from, to);
 		forex.setPort(Integer.parseInt(environment.getProperty("server.port")));
 		LOG.info(forex.toString());
