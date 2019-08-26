@@ -1,8 +1,5 @@
 package com.microservice.forex.controller;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
